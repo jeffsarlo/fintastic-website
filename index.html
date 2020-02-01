@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Fintastic Aquarium Fish and Supplies</title>
+
+    <!---------------- STYLE SHEETS --------------------->
+    <!-- Bootstrap 4.4.1 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"
+    >
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="./css/animate.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-------------------- JAVASCRIPT ----------------------->
+    <!-- JQuery 3.4.1 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Partials Script -->
+    <script>
+      $(document).ready(function(){
+        $('#footer').load('./partials/footer.html')
+        $('#header').load('./partials/header.html')
+        $('#navbar').load('./partials/navbar.html')
+        $('#navbar-mobile').load('./partials/navbar-mobile.html')
+        $('#banner').load('./partials/banner.html')
+      })
+    </script>
+
+  </head>
+  <body>
+
+    <div id="to-top"><i class="fas fa-arrow-circle-up"></i></div>
+
+    <div class="wrapper">
+
+      <!--================ Header Section Starts ===================-->
+      <header id="header"></header>
+      <!--================ Header Section Ends =====================-->
+
+
+      <!--================ Navbar Section Starts ===================-->
+      <!-- Navbar when width is >= 900px -->
+      <nav class="nav container-fluid" id="navbar"></nav>
+      <!-- nav toggle -->
+      <div id="toggle">
+        <div class="span"><i class="fas fa-bars"></i></div>
+      </div>
+      <!-- Navbar when width is < 900px -->
+      <div id="navbar-mobile"></div>
+      <!--================ Navbar Section Ends ====================-->
+
+
+      <!--================ Banner Section Starts ===================-->
+      <div class="container-fluid banner" id="banner"></div>
+      <!--================ Banner Section Ends =====================-->
+
+
+      <!--================= Main Section Starts ====================-->
+      <main class="main">
+        <div id="main-container" class="container-fluid p-0">
+          <!------------ Main Row 1 Slider Banner -------------------->
+          <div class="row main-row-one" id="main-sliders">
+            <div id="img-slider" class="container-fluid col-md-12 p-0 m-0">
+              <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <!-- Slide 1 -->
+                  <div class="carousel-item active">
+                    <img id="slide-1" src="./media/slides/slide-1.jpg" class="d-block w-100" alt="Trigger">
+                    <div class="carousel-caption d-none d-md-block slider-caption">
+                      <h2>Quality Aquarium Supplies</h2>
+                      <p>Get the supplies you need and <strong>earn 5% reward!</strong></p>
+                      <button type="button" class="btn slider-btn">Shop Now</button>
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="carousel-item">
+                    <img id="slide-2" src="./media/slides/slide-2.jpg" class="d-block w-100" alt="">
+                    <div class="carousel-caption d-none d-md-block slider-caption">
+                      <h2>Custom Aquariums</h2>
+                      <p>
+                        Complete our questionaire to receive a <strong>FREE CONSULTATION and a FREE QUOTE.</strong>
+                      </p>
+                      <button type="button" class="btn slider-btn">Contact Form</button>
+                    </div>
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="carousel-item">
+                    <img id="slide-3" src="./media/slides/slide-3.jpg" class="d-block w-100" alt="Aquarium">
+                    <div class="carousel-caption d-none d-md-block slider-caption">
+                      <h2>Live Plants</h2>
+                      <p>Improve water quality and enhance your tanks natural beauty with live plants.</p>
+                      <button type="button" class="btn slider-btn">Inventory</button>
+                    </div>
+                  </div>
+                </div>
+                <!-------- Carousel Prev/Next Arrows ---------->
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!------------- Row 2 Featured Product Title ----------------->
+          <div class="row main-row-2">
+            <div class="col-md-12">
+              <div id="featured-title">
+                <h2 class="wow fadeIn">Featured Products</h2>
+              </div>
+            </div>
+          </div>
+          <!------------- Row 3 Featured Products & Search Sidebar -------->
+          <div class="row m-auto main-row-three" id="products">
+            <!---- Search Bar ---->
+            <div class="col-md-2 pt-3 search">
+              <div id="search-bar">
+                <div id="search-title">
+                  <h6>Categories</h6>
+                </div>
+                <!-- Search Categories -->
+                <div class="dropdown">
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button" id="dropdownMenu2"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                    choose
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button">Freshwater</button>
+                    <button class="dropdown-item" type="button">Marine</button>
+                    <button class="dropdown-item" type="button">Live</button>
+                    <button class="dropdown-item" type="button">Filter Media</button>
+                    <button class="dropdown-item" type="button">Aquarium Supplies</button>
+                    <button class="dropdown-item" type="button">Care & Nutrition</button>
+                    <button class="dropdown-item" type="button">Maintenance</button>
+                  </div>
+                </div>
+                <h5>Narrow Results</h5>
+                <!-- Search Specials -->
+                <h6>Specials</h6>
+                <div class="dropdown">
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button" id="dropdownMenu2"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                    choose
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button">Livestock</button>
+                    <button class="dropdown-item" type="button">Supplies</button>
+                    <button class="dropdown-item" type="button">Food</button>
+                  </div>
+                </div>
+                <!-- Search Brands -->
+                <h6>Brand</h6>
+                <div class="dropdown">
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button" id="dropdownMenu2"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                    choose
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button">Aquamaxx</button>
+                    <button class="dropdown-item" type="button">Coralife</button>
+                    <button class="dropdown-item" type="button">Eshopps</button>
+                    <button class="dropdown-item" type="button">Fluval</button>
+                    <button class="dropdown-item" type="button">Hagen</button>
+                    <button class="dropdown-item" type="button">Neptune Systems</button>
+                    <button class="dropdown-item" type="button">Phoenix</button>
+                    <button class="dropdown-item" type="button">Red Sea</button>
+                    <button class="dropdown-item" type="button">SpectraPure</button>
+                    <button class="dropdown-item" type="button">Zoo Med</button>
+                  </div>
+                </div>
+                <!-- Search by Price -->
+                <h6>Price</h6>
+                <div class="dropdown">
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button" id="dropdownMenu2"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                    choose
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button">$.99 - $24.99</button>
+                    <button class="dropdown-item" type="button">$25.00 - $99.99</button>
+                    <button class="dropdown-item" type="button">$100.00 - $249.99</button>
+                    <button class="dropdown-item" type="button">$250.00 + </button>
+                  </div>
+                </div>
+                <div class="button">
+                  <button type="button" class="btn submit-btn">Submit</button>
+                </div>
+              </div>
+            </div>
+            <!----------- Featured Products Carousels ------------>
+            <div class="col-md-10 featured">
+              <div id="featured-categories">
+                <!------ Carousel 1 Live Fish -------->
+                <div class="row featured-row" id="live-fish">
+                  <div class="col-md-12">
+                    <a href="./livestock.html"><h3 class="wow fadeIn">Livestock</h3></a>
+                    <div class="owl-carousel owl-theme">
+                      <div class="img-box" id="carousel-img">
+                        <img src="./media/products/fish/Twin-Tail-Betta.jpg" alt="Betta">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/fish/Royal-Red-Discus.jpg" alt="Discus">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$149.99</s></small>
+                            <span>Now</span>
+                            <span>$99.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/fish/Rio-Negro-Pleco.jpg" alt="Pleco">
+                        <div class="price">
+                          <h6>
+                            <small><s>$50.00</s></small>
+                            <span>Now</span>
+                            <span>$44.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/fish/Flame-Dwarf-Gourami.jpg" alt="Gourami">
+                        <div class="price">
+                          <h6>
+                            <small><s>$49.99</s></small>
+                            <span>Now</span>
+                            <span>$39.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/fish/Clownfish.jpg" alt="Clownfish">
+                        <div class="price">
+                          <h6>
+                            <small><s>$102.99</s></small>
+                            <span>Now</span>
+                            <span>$75.00</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/fish/Coral-Beauty-Angel.jpg" alt="Angel">
+                        <div class="price">
+                          <h6>
+                            <small><s>$85.99</s></small>
+                            <span>Now</span>
+                            <span>$65.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/fish/Flame-Hawkfish.jpg" alt="Hawkfish">
+                        <div class="price">
+                          <h6>
+                            <small><s>$175.00</s></small>
+                            <span>Now</span>
+                            <span>$149.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/fish/Royal-Gramma-Basslet.jpg" alt="Basslet">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$105.00</s></small>
+                            <span>Now</span>
+                            <span>$59.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!------- Carousel 2 Filters ---------->
+                <div class="row featured-row" id="filter">
+                  <div class="col-md-12">
+                    <a href="./filter.html"><h3 class="wow fadeIn">Filter & Media</h3></a>
+                    <div class="owl-carousel owl-theme">
+                      <div class="img-box">
+                        <img src="./media/products/filter/Bio-Balls.jpg" alt="Bio Balls">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/filter/Bio-Foam.jpg" alt="Bio Foam">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/filter/Carbon.jpg" alt="Carbon">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/filter/Deionization.jpg" alt="Deionization">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/filter/Eshopps-Filter.jpg" alt="Filter">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/filter/Fluval-Filter.jpg" alt="Filter">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/filter/Penguin-Filter.jpg" alt="Filter">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/filter/Skimmer.jpg" alt="Skimmer">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-------- Carousel 3 Aquarium Supplies -------->
+                <div class="row featured-row" id="supplies">
+                  <div class="col-md-12">
+                    <a href="./supplies.html"><h3 class="wow fadeIn">Aquarium Supplies</h3></a>
+                    <div class="owl-carousel owl-theme">
+                      <div class="img-box">
+                        <img src="./media/products/supplies/Ammonia-Remover.jpg" alt="Ammonia">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/supplies/Coral-Salt.jpg" alt="Salt">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/supplies/Driftwood.jpg" alt="Driftwood">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/supplies/Eco-Complete.jpg" alt="Eco-Complete">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/supplies/LED.jpg" alt="LED light">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/supplies/Magnesium-Chloride.jpg" alt="Magnesium CL">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/supplies/Nano-Light.jpg" alt="Nano Light">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/supplies/Thermometer.jpg" alt="Thermometer">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!------- Carousel 4 Care & Nutrition ------->
+                <div class="row featured-row" id="care">
+                  <div class="col-md-12">
+                    <a href="./care.html"><h3 class="wow fadeIn">Care & Nutrition</h3></a>
+                    <div class="owl-carousel owl-theme">
+                      <div class="img-box">
+                        <img src="./media/products/care/Algae.jpg" alt="Algae">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/care/Algae-Pods.jpg" alt="Algae Pods">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/care/Brine-Shrimp.jpg" alt="Brine Shrimp">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/care/Cichlid-Gold.jpg" alt="Cichlid Gold">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/care/Dragon-Tongue.jpg" alt="Dragon Tongue">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/care/Krill.jpg" alt="Krill">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/care/Probiotix.jpg" alt="Probiotix">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/care/Shrimp.jpg" alt="Shrimp">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!---------- Carousel 5 Maintenance ------------>
+                <div class="row featured-row" id="maintenance">
+                  <div class="col-md-12">
+                    <a href="./maintenance.html"><h3 class="wow fadeIn">Maintenance</h3></a>
+                    <div class="owl-carousel owl-theme">
+                      <div class="img-box">
+                        <img src="./media/products/maintenance/Algae-Mitt.jpg" alt="Algae Mitt">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/maintenance/CO2-Kit.jpg" alt="CO2 Kit">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/maintenance/Python-Hose.jpg" alt="Python Hose">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/maintenance/Python-Porter.jpg" alt="Python Porter">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/maintenance/Siphon-Bulb.jpg" alt="Siphon Bulb">
+                        <div class="price">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/maintenance/Siphon.jpg" alt="Siphon">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/maintenance/Topoff-Controller.jpg" alt="Controller">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                      <div class="img-box">
+                        <img src="./media/products/maintenance/Water-Changer.jpg" alt="Water Changer">
+                        <div class="price super">
+                          <h6>
+                            <small><s>$125.99</s></small>
+                            <span>Now</span>
+                            <span>$119.99</span>
+                          </h6>
+                        </div>
+                        <div class="details">
+                          <button class="site-btn btn-span">Click for more Info</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----------------- Main Row 4 Video Section ----------------->
+          <div class="container-fluid p-4" id="video-section">
+            <div class="row video-row">
+              <div class="col-md-3 p-0 wow fadeIn">
+                <div id="more-videos" class="d-flex flex-column align-items-center px-2 pt-5 pb-5">
+                  <h3>Featured Videos</h3>
+                  <p class="pb-4">
+                    Over 100 instructional videos to help you build and maintain your freshwater and marine aquariums!
+                  </p>
+                  <form class="form-inline md-form form-sm mt-0 pb-5 w-90">
+                    <i class="fas fa-search mr-2" aria-hidden="true"></i>
+                    <input
+                      class="form-control form-control-sm w-90"
+                      type="text"
+                      placeholder="Search videos"
+                      aria-label="Search"
+                    >
+                  </form>
+                  <button id="video-btn" class="submit-btn">View All Videos</button>
+                </div>
+              </div>
+              <!---------- Video Container -------------->
+              <div class="col-md-9">
+                <div id="featured-video-container">
+                  <!---------- Video Row 1 ----------->
+                  <div class="row video-title">
+                    <h3 class="ml-3 wow fadeInRight">Aquarium Setup</h3>
+                  </div>
+                  <div class="row mb-3">
+                    <!---------- Video 1 ------------->
+                    <a
+                    href="https://youtu.be/tSg-Zgps_d0"
+                    data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-md-3 col-sm-4 pb-2"
+                    >
+                      <img src="http://i1.ytimg.com/vi/tSg-Zgps_d0/mqdefault.jpg" class="img-fluid">
+                    </a>
+                    <!------------ Video 2 ------------->
+                    <a
+                    href="https://youtu.be/QfEQdYQ_HZk"
+                    data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-md-3 col-sm-4 pb-2"
+                    >
+                      <img src="http://i1.ytimg.com/vi/QfEQdYQ_HZk/mqdefault.jpg" class="img-fluid">
+                    </a>
+                    <!----------- Video 3 ------------->
+                    <a
+                    href="https://youtu.be/HuT3mH9_drI"
+                    data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-md-3 col-sm-4 pb-2"
+                    >
+                      <img src="http://i1.ytimg.com/vi/HuT3mH9_drI/mqdefault.jpg" class="img-fluid">
+                    </a>
+                    <!----------- Video 4 ----------->
+                    <a
+                    href="https://youtu.be/qwN9fN8bEHI"
+                    data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-md-3 col-sm-4 pb-2"
+                    >
+                      <img src="http://i1.ytimg.com/vi/qwN9fN8bEHI/mqdefault.jpg" class="img-fluid">
+                    </a>
+                  </div>
+                  <!----------- Video Row 2 ------------>
+                  <div class="row video-title">
+                    <h3 class="ml-3 wow fadeInRight">Livestock</h3>
+                  </div>
+                  <div class="row mb-3">
+                    <!--------- Video 5 --------------------->
+                    <a
+                    href="https://youtu.be/mGmIvhtIM9k"
+                    data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-md-3 col-sm-4 pb-2"
+                    >
+                      <img src="http://i1.ytimg.com/vi/mGmIvhtIM9k/mqdefault.jpg" class="img-fluid">
+                    </a>
+                    <!---------- Video 6 ---------->
+                    <a
+                    href="https://youtu.be/ZmnLJtkKGU4"
+                    data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-md-3 col-sm-4 pb-2"
+                    >
+                      <img src="http://i1.ytimg.com/vi/ZmnLJtkKGU4/mqdefault.jpg" class="img-fluid">
+                    </a>
+                    <!---------- Video 7 ---------->
+                    <a
+                    href="https://youtu.be/ooX5Q-Oc1Yw"
+                    data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-md-3 col-sm-4 pb-2"
+                    >
+                      <img src="http://i1.ytimg.com/vi/ooX5Q-Oc1Yw/mqdefault.jpg" class="img-fluid">
+                    </a>
+                    <!---------- Video 8 ---------->
+                    <a
+                    href="https://youtu.be/1-o9kkfIm7A"
+                    data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-md-3 col-sm-4 pb-2"
+                    >
+                      <img src="http://i1.ytimg.com/vi/1-o9kkfIm7A/mqdefault.jpg" class="img-fluid">
+                    </a>
+                  </div>
+                  <!-------- Video Row 3 -------->
+                  <div class="row video-title">
+                    <h3 class="ml-3 wow fadeInRight">Filters & Equipment</h3>
+                  </div>
+                  <div class="row">
+                    <!-------- Video 9 -------->
+                    <a
+                    href="https://youtu.be/OyxqiUaRq74"
+                    data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-md-3 col-sm-4 pb-2"
+                    >
+                      <img src="http://i1.ytimg.com/vi/OyxqiUaRq74/mqdefault.jpg" class="img-fluid">
+                    </a>
+                    <!-------- Video 10 -------->
+                    <a
+                    href="https://youtu.be/ipTDkQsT6HQ"
+                    data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-md-3 col-sm-4 pb-2"
+                    >
+                      <img src="http://i1.ytimg.com/vi/ipTDkQsT6HQ/mqdefault.jpg" class="img-fluid">
+                    </a>
+                    <!-------- Video 11 -------->
+                    <a
+                    href="https://youtu.be/aBG9GMC7Hv0"
+                    data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-md-3 col-sm-4 pb-2"
+                    >
+                      <img src="http://i1.ytimg.com/vi/aBG9GMC7Hv0/mqdefault.jpg" class="img-fluid">
+                    </a>
+                    <!-------- Video 12 -------->
+                    <a
+                    href="https://youtu.be/GMptP4cemNU"
+                    data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-md-3 col-sm-4 pb-2"
+                    >
+                      <img src="http://i1.ytimg.com/vi/GMptP4cemNU/mqdefault.jpg" class="img-fluid">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!--=================== Main Section Ends ====================-->
+
+
+      <!--================= Footer Section Starts ==================-->
+      <footer id="footer"></footer>
+      <!--================= Footer Section Ends ====================-->
+    </div>
+
+    <!-- jQuery v3.4.1 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- GSAP js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.1/gsap.min.js"></script>
+    <!-- Bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <!-- WOW js -->
+    <script src="js/wow.min.js"></script>
+    <!-- Owl Carousel js -->
+    <script src="./js/owl.carousel.min.js"></script>
+    <!-- Animation js -->
+    <script src="./js/animation.js"></script>
+    <!-- Lightbox js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <!-- Main js -->
+    <script src="./js/main.js"></script>
+
+  </body>
+</html>
